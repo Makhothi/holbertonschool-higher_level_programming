@@ -1,5 +1,4 @@
 #!/usr/bin/python3
 str = "Holberton School"
-age = "Holberton"
-print(f"{str}{str}{str}")
-print(f"{age}")
+print("{}".format(str) * 3)
+print(str[:9])

@@ -1,19 +1,17 @@
 #!/usr/bin/python3
-
-
-def print_arg(long):
-    for num_arg in range(1, long):
-        print("{:d}: {:s}".format(num_arg, sys.argv[num_arg]))
-
+# 2-args.py
+# Brennan D Baraban <375@holbertonschool.com>
 
 if __name__ == "__main__":
+    """Print the number of and list of arguments."""
     import sys
-    long = len(sys.argv)
-    if long == 1:
-        print("{:d} arguments.".format(long - 1))
-    elif long == 2:
-        print("{:d} argument:".format(long - 1))
-    else:
-        print("{:d} arguments:".format(long - 1))
 
-    print_arg(long)
+    count = len(sys.argv) - 1
+    if count == 0:
+        print("0 arguments.")
+    elif count == 1:
+        print("1 argument:")
+    else:
+        print("{} arguments:".format(count))
+    for i in range(count):
+        print("{}: {}".format(i + 1, sys.argv[i + 1]))

@@ -1,12 +1,8 @@
 #!/usr/bin/python3
-
-
-def my_function():
-    import hidden_4
-    for count in dir(hidden_4):
-        if count[0] != "_" and count[1] != "_":
-            print(count)
-
+import hidden_4
 
 if __name__ == "__main__":
-    my_function()
+    names = dir(hidden_4)
+    for name in sorted(names):
+        if not name.startswith("__"):
+            print(name)

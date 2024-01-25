@@ -1,14 +1,12 @@
 #!/usr/bin/python3
-
-
-def add_num(long):
-    add = 0
-    for count in range(1, long):
-        add = add + int(sys.argv[count])
-    print(add)
-
-
 if __name__ == "__main__":
     import sys
-    long = len(sys.argv)
-    add_num(long)
+    i = 1
+    sum = 0
+    n = len(sys.argv)
+    if n == 1:
+        print('0')
+    else:
+        for i in range(1, n):
+            sum += int(sys.argv[i])
+        print(sum)

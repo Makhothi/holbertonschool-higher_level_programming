@@ -1,13 +1,10 @@
 #!/usr/bin/python3
-"""Definition of function my_list"""
+"""Defines an inherited list class MyList."""
 
 
 class MyList(list):
-    """Class Mylist with list in inherit"""
+    """Implements sorted printing for the built-in list class."""
 
     def print_sorted(self):
-        """"Function that prints the list, but sorted """
-        for item in self:
-            if not isinstance(item, int):
-                raise TypeError("not all elements in list are integer")
+        """Print a list in sorted ascending order."""
         print(sorted(self))
